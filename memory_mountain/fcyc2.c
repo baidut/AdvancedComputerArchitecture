@@ -1,6 +1,6 @@
 /* Compute time used by a function f that takes two integer args */
 #include <stdlib.h>
-#include <sys/times.h>
+#include "sys/times.h"
 #include <stdio.h>
 
 #include "clock.h"

@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/times.h>
+#include "sys/times.h"
 #include "clock.h"
-
 
 /* Routines for using cycle counter */
 

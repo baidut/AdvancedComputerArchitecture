@@ -32,6 +32,11 @@ int main()
     printf("Clock frequency is approx. %.1f MHz\n", Mhz);
     printf("Memory mountain (MB/sec)\n");
 
+    FILE *fp;
+	fp=fopen("mountain.txt","w");
+	if(fp==NULL) {printf("open file error.\n");exit(EXIT_FAILURE);}
+
+    // fprintf(fp,"size\\stride\t");
     printf("\t");
     for (stride = 1; stride <= MAXSTRIDE; stride += STRIDESTRIDE)
 	printf("s%d\t", stride);
@@ -48,9 +53,12 @@ int main()
 
 /* $begin mountainmain */
 	for (stride = 1; stride <= MAXSTRIDE; stride += STRIDESTRIDE) {
-	    printf("%.0f\t", run(size, stride, Mhz));
+	    double tmp = run(size, stride, Mhz);
+	    printf("%.0f\t", tmp);
+	    fprintf(fp,"%.1f\t", tmp);
 	}
 	printf("\n");
+	fprintf(fp,"\n");
     }
     exit(0);
 }
