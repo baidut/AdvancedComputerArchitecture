@@ -43,10 +43,10 @@
 		<Unit filename="mountain.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="sys/times.h" />
-		<Unit filename="times.c">
+		<Unit filename="sys/times.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="sys/times.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

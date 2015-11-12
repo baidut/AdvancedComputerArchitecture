@@ -29,14 +29,10 @@ int main()
     Mhz = mhz(0);              /* Estimate the clock frequency */
 /* $end mountainmain */
     /* Not shown in the text */
-    printf("Clock frequency is approx. %.1f MHz\n", Mhz);
-    printf("Memory mountain (MB/sec)\n");
+    // printf("Clock frequency is approx. %.1f MHz\n", Mhz);
+    // printf("Memory mountain (MB/sec)\n");
 
-    FILE *fp;
-	fp=fopen("mountain.txt","w");
-	if(fp==NULL) {printf("open file error.\n");exit(EXIT_FAILURE);}
-
-    // fprintf(fp,"size\\stride\t");
+    printf("size\\stride");
     printf("\t");
     for (stride = 1; stride <= MAXSTRIDE; stride += STRIDESTRIDE)
 	printf("s%d\t", stride);
@@ -55,10 +51,8 @@ int main()
 	for (stride = 1; stride <= MAXSTRIDE; stride += STRIDESTRIDE) {
 	    double tmp = run(size, stride, Mhz);
 	    printf("%.0f\t", tmp);
-	    fprintf(fp,"%.1f\t", tmp);
 	}
 	printf("\n");
-	fprintf(fp,"\n");
     }
     exit(0);
 }

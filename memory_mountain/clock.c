@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "sys/times.h"
+#ifdef _WIN32
+	#include "sys/times.h"
+#else
+	#include <sys/times.h>
+#endif
 #include "clock.h"
 
 /* Routines for using cycle counter */
