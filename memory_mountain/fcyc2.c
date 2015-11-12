@@ -1,11 +1,6 @@
 /* Compute time used by a function f that takes two integer args */
 #include <stdlib.h>
-#ifdef _WIN32
-	#include "sys/times.h"
-#else
-	#include <sys/times.h>
-#endif
-
+#include "sys/times.h"
 #include <stdio.h>
 
 #include "clock.h"
