@@ -11,7 +11,7 @@ Demo: `cd memory_mountain\demo` and run `demo.bat`
 - __memory_mountain.exe__ prints data. cmd > `display_mountain > mountain.txt`
 - __display_mountain.m__ read data and display. matlab > `display_mountain mountain.txt`
 
-[Download Release](./releases/tag/memory_mountain)
+[Download Release](https://github.com/baidut/AdvancedComputerArchitecture/releases/tag/memory_mountain)
 
 References:
 
